@@ -1,6 +1,6 @@
 <?php
 
-    $conn = mysqli_connect("localhost","root","","verificheinfo");
+    $conn = mysqli_connect("localhost","root","","webbi-commerce");
 
     if (($conn == false) || ($conn->connect_errno)) {
         echo "Errore in connessione MySQL()";
