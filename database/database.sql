@@ -45,6 +45,12 @@ CREATE TABLE articoliOrdini(
     ON DELETE CASCADE
 );
 
+CREATE TABLE categorie(
+	ID int(11) auto_increment primary key,
+    Nome varchar(255) not null,
+	Color varchar(255) not null
+);
+
 
 ALTER TABLE articoli 
 modify column Prezzo decimal(10,2) not null;
