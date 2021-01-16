@@ -1,5 +1,6 @@
 <?php
 
+
     include("components/connessione.php");
     include("components/modelloProdotto.php");
 
@@ -14,6 +15,11 @@
         $prodotti[] = new Articolo($arr);
     }
 
+    $cards = "";
+
+    foreach($prodotti as $prod){
+        $cards.= $prod->toHtml();
+    }
 
     $html = " <!doctype html>
                 <html>
@@ -25,7 +31,11 @@
                     <!-- ... -->
                     </head>
                     <body>
-                        prodotti
+                        <div class='container my-4 mx-auto'>
+                            <div class='flex flex-col sm:flex-row flex-nowrap'>
+                                $cards
+                            </div>
+                        </div>
                     </body>
                 </html>";
         
