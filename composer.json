@@ -2,7 +2,7 @@
     "name": "mattia/web-commerce",
     "description": "un e-commerce fatto in php col tailwind nazionale",
     "type": "project",
-    "minimum-stability": "dev",
+    "minimum-stability": "prefer-stable",
     "authors": [
         {
             "name": "Mattia Ferrari",
