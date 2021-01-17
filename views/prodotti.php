@@ -21,7 +21,6 @@
     foreach($prodotti as $prod){
         $cards.= $prod->toHtml();
     }
-    
     $html = " <!doctype html>
                 <html>
                     <head>

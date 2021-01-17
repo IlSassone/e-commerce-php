@@ -14,25 +14,25 @@ $request = $_SERVER['REQUEST_URI'];
 
     if (str_contains($request, "/p")) require __DIR__ . '/views/singoloProdotto.php';
     else {
-    switch ($request) {
-        case '/':
-            require __DIR__ . '/views/prodotti.php';
-            break;
-        case '':
-            require __DIR__ . '/views/prodotti.php';
-            break;
-        case '/login':
-            require __DIR__ . '/views/login.php';
-            break;
-        case '/carrello':
-            require __DIR__ . '/views/carrello.php';
-            break;
-        case '/validate':
-            require __DIR__ . '/components/validateLogin.php';
-            break;
-        default:
-            require __DIR__ . '/views/404.html';
-            break;
-    }
+        switch ($request) {
+            case '/':
+                require __DIR__ . '/views/prodotti.php';
+                break;
+            case '':
+                require __DIR__ . '/views/prodotti.php';
+                break;
+            case '/login':
+                require __DIR__ . '/views/login.php';
+                break;
+            case '/carrello':
+                require __DIR__ . '/views/carrello.php';
+                break;
+            case '/validate':
+                require __DIR__ . '/components/validateLogin.php';
+                break;
+            default:
+                require __DIR__ . '/views/404.html';
+                break;
+        }
 
     }
