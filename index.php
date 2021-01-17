@@ -1,5 +1,6 @@
 <?php
-
+    print_r("CAPIAMO");
+    exit();
 /*
     Home page con vista prodotti
     pattern master-detail (su lista articoli)
