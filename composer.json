@@ -2,11 +2,13 @@
     "name": "mattia/web-commerce",
     "description": "un e-commerce fatto in php col tailwind nazionale",
     "type": "project",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Mattia Ferrari",
             "email": "mattia2002.ferrari@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+    }
 }
