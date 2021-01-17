@@ -13,7 +13,7 @@
 
 $request = $_SERVER['REQUEST_URI'];
 
-    if (strpos($request, "/p")!==false) require __DIR__ . '/views/singoloProdotto.php';
+    if (str_contains($request, "/p")) require __DIR__ . '/views/singoloProdotto.php';
     else {
         switch ($request) {
             case '/':
