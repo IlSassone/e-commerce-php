@@ -1,13 +1,5 @@
-DirectorySlash Off
-Options FollowSymLinks Indexes
-DirectoryIndex index.php
-
 RewriteEngine on
-
-RewriteCond %{REQUEST_FILENAME}  -d
-RewriteRule  ^.*$  -  [L]
-
-RewriteCond %{REQUEST_FILENAME}  -f
-RewriteRule  ^.*$  -  [L]
-
-RewriteRule ^.*$    index.php [L]
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-l
+RewriteRule ^(.*)$ index.php/$1
