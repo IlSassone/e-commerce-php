@@ -51,6 +51,9 @@ CREATE TABLE categorie(
 	Color varchar(255) not null
 );
 
+select * from clienti;
+insert into clienti(CF, Nome, Cognome, Email, Password, LinkImmagine) VALUES 
+("qwertyuiopasdfgh", "Mattia", "Ferrari", "emailvalida@gmail.com", "pass","https://cdn.discordapp.com/attachments/771033112750194739/799056935621230592/unknown.png");
 
 ALTER TABLE articoli 
 modify column Prezzo decimal(10,2) not null;
@@ -66,5 +69,7 @@ add column Valuta varchar(3) not null;
 ALTER table articoliOrdini
 add column Valuta varchar(3) not null;
 
+ALTER table clienti
+add column LinkImmagine varchar(255) default null;
 
 

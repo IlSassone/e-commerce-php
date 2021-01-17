@@ -24,6 +24,12 @@ $request = $_SERVER['REQUEST_URI'];
         case '/login':
             require __DIR__ . '/views/login.php';
             break;
+        case '/carrello':
+            require __DIR__ . '/views/carrello.php';
+            break;
+        case '/validate':
+            require __DIR__ . '/components/validateLogin.php';
+            break;
         default:
             require __DIR__ . '/views/404.html';
             break;

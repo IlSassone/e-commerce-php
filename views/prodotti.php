@@ -1,9 +1,10 @@
 <?php
 
 
+    include('components/navbar.php');
     include("components/connessione.php");
     include("components/modelloProdotto.php");
-
+    //print_r($_POST);
     $prodotti = Array();
 
     $sql = "SELECT * FROM articoli";
@@ -20,7 +21,7 @@
     foreach($prodotti as $prod){
         $cards.= $prod->toHtml();
     }
-
+    
     $html = " <!doctype html>
                 <html>
                     <head>
@@ -31,6 +32,7 @@
                     <!-- ... -->
                     </head>
                     <body>
+                        $nav
                         <div class='container my-4 mx-auto'>
                             <div class='flex flex-col sm:flex-row flex-nowrap'>
                                 $cards
