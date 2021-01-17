@@ -2,7 +2,7 @@
     session_start();
     $navContent = "";
     if(!array_key_exists('EMAIL', $_SESSION)){
-        $navContent = "<a href='/login' class='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>Login</a>";
+        $navContent = "<a href='./login.php' class='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>Login</a>";
     }
     else{
         $navContent = "<div class='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>

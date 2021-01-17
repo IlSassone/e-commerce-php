@@ -1,9 +1,9 @@
 <?php
 
 
-    include('components/navbar.php');
-    include("components/connessione.php");
-    include("components/modelloProdotto.php");
+    include('../components/navbar.php');
+    include("../components/connessione.php");
+    include("../components/modelloProdotto.php");
     //print_r($_POST);
     $prodotti = Array();
 

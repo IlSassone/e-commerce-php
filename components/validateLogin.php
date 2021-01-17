@@ -1,5 +1,5 @@
 <?php
-    include("./components/connessione.php");
+    include("./connessione.php");
     session_start();
     //print_r($_POST);
     $sql = "SELECT * FROM clienti WHERE Email='{$_POST["email"]}' and Password='{$_POST["password"]}' LIMIT 1";
@@ -13,10 +13,10 @@
         $_SESSION["NOME"] = $user["Nome"];
         $_SESSION["COGNOME"] = $user["Cognome"];
         $_SESSION["CF"] = $user["CF"];
-        header("location: /");
+        header("location: ../");
     }
     else {
-        header("location: /login");
+        header("location: ../views/login.php");
     }
 
 

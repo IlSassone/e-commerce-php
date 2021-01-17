@@ -1,6 +1,6 @@
 <?php
-    include('components/loginForm.php');
-    include('components/connessione.php');
+    include('../components/loginForm.php');
+    include('../components/connessione.php');
 
     $html = " <!doctype html>
             <html>
