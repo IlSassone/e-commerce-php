@@ -10,6 +10,7 @@
 */
 
 
+
 $request = $_SERVER['REQUEST_URI'];
 
     if (str_contains($request, "/p")) require __DIR__ . '/views/singoloProdotto.php';

@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '6b894d89b9862f3860a84ea77d9ba23a38c72a33',
+    'reference' => '5340d04a5b748a6835688f5051e155d55a7e3287',
     'name' => 'mattia/web-commerce',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '6b894d89b9862f3860a84ea77d9ba23a38c72a33',
+      'reference' => '5340d04a5b748a6835688f5051e155d55a7e3287',
     ),
   ),
 );
