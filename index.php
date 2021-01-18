@@ -11,8 +11,4 @@
 
 
 
-$request = $_SERVER['REQUEST_URI'];
-print_r($request);
-
-
 header("location: views/prodotti.php");
