@@ -1,14 +1,28 @@
 <?php
 
+    function startsWith($haystack, $needle){
+        $length = strlen($needle);
+        return substr($haystack, 0, $length) === $needle;
+    }
 
     include('../components/navbar.php');
     include("../components/connessione.php");
     include("../components/modelloProdotto.php");
-    //print_r($_POST);
     $prodotti = Array();
+    if(!array_key_exists("search", $_POST)){
 
-    $sql = "SELECT * FROM articoli";
-
+        $sql = "SELECT a.*, c.Nome as NomeCategoria, c.Colore as ColoreBadge FROM articoli a, categorie c WHERE a.Categoria=c.ID";
+    }
+    else{
+        $key = $_POST["search"];
+        if(startsWith($key, "#")){
+            $key = str_replace("#", '', $key);
+            $sql="SELECT a.*, c.Nome as NomeCategoria, c.Colore as ColoreBadge FROM articoli a, categorie c WHERE a.Categoria=c.ID and c.Nome LIKE '%{$key}%'";
+        }
+        else{
+            $sql = "SELECT a.*, c.Nome as NomeCategoria, c.Colore as ColoreBadge FROM articoli a, categorie c WHERE a.Categoria=c.ID and a.Nome LIKE '%{$key}%'";
+        }
+    }
     $righe = eseguiquery($sql);
 
     
@@ -21,6 +35,7 @@
     foreach($prodotti as $prod){
         $cards.= $prod->toHtml();
     }
+    if($cards=="") $cards= "Nessun prodotto con questi criteri di ricerca, oppure il db è morto, non si sa";
     $html = " <!doctype html>
                 <html>
                     <head>

@@ -34,7 +34,7 @@
                         <div class='show origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5' role='menu' aria-orientation='vertical' aria-labelledby='user-menu' id='drop'>
                             <a href='#' class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100' role='menuitem'>Your Profile</a>
                             <a href='#' class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100' role='menuitem'>Settings</a>
-                            <a href='#' class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100' role='menuitem'>Sign out</a>
+                            <a href='./logout.php' class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100' role='menuitem'>Sign out</a>
                         </div>
                     </div>";
     }
@@ -75,10 +75,10 @@
                     <div class='hidden sm:block sm:ml-6'>
                         <div class='flex space-x-4'>
                             <!-- Current: 'bg-gray-900 text-white', Default: 'text-gray-300 hover:bg-gray-700 hover:text-white' -->
-                            <a href='#' class='bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'>Prodotti</a>
+                            <a href='./prodotti.php' class='bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'>Prodotti</a>
 
                             <div class='relative mx-auto text-gray-600'>
-                                <form method='POST' action='/'>
+                                <form method='POST' action='./prodotti.php'>
                                     <input class='border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none' type='search'
                                         name='search' placeholder='Search'>
                                     <button type='submit' class='absolute right-0 top-0 mt-2 mr-2'>
@@ -105,7 +105,7 @@
                 <!-- Current: 'bg-gray-900 text-white', Default: 'text-gray-300 hover:bg-gray-700 hover:text-white' -->
                 <a href='#' class='bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium'>Prodotti</a>
                 <div class='relative mx-auto text-gray-600'>
-                    <form method='POST' action='/'>
+                    <form method='POST' action='./prodotti.php'>
                         <input class='border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none' type='search'
                             name='search' placeholder='Search'>
                         <button type='submit' class='absolute right-0 top-0 mt-2 mr-2 text-white-500'>
