@@ -1,9 +1,7 @@
 <?php
 
     include('../environment.php');
-    if(in_array( $_SERVER['REMOTE_ADDR'], array( '127.0.0.1', '::1'))) { 
-    }
-    $conn = mysqli_connect("prova-laravel.cv7lz07jnv6w.eu-central-1.rds.amazonaws.com","admin","provaprova","ecommerce");
+    $conn = mysqli_connect("e-commerce-fattuale.cv7lz07jnv6w.eu-central-1.rds.amazonaws.com","admin",$_ENV["PASS"],"ecommerce");
 
     if (($conn == false) || ($conn->connect_errno)) {
         echo "Errore in connessione MySQL()";
