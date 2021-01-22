@@ -1,7 +1,7 @@
 <?php
 
     include('../environment.php');
-    $conn = mysqli_connect("e-commerce-fattuale.cv7lz07jnv6w.eu-central-1.rds.amazonaws.com","admin",$_ENV["PASS"],"ecommerce");
+    $conn = mysqli_connect("remotemysql.com", "mO8L6KYQgg",$_ENV["PASS"], "mO8L6KYQgg");
 
     if (($conn == false) || ($conn->connect_errno)) {
         echo "Errore in connessione MySQL()";
